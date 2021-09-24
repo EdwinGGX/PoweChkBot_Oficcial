@@ -83,20 +83,25 @@ async def tv(message: types.Message):
     # capture ac details
     if "Access denied" in r.text:
         await message.reply(f"""
-<b>COMBO</b>➟ <code>{ac}</code>
-<b>STATUS</b>➟ ❌WRONG DETAILS
-TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>Combo ➻ </b> <code>{ac}</code>
+<b>Stado ➻ </b> Wrong Details! ㊙️
+<b>Time ➻ <b>{toc - tic:0.4f}</b>(s)
+<b>Checked by: </b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>Bot by: @EdwinGGx 🐧</b>
+\n
+<b>🟢-PowerChkBot-🟢</b>
+
 """)
     elif "PASS" in r.text:
         res = r.json()
         await message.reply(f"""
-<b>COMBO</b>➟ <code>{ac}</code>
-<b>STATUS</b>➟ ✅VALID
-<b>LEVEL</b>➟ {res['details']['bearType']}
-<b>VALIDTILL</b>➟ {res['details']['fullVersionUntil']}
-TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>Combo ➻ </b> <code>{ac}</code>
+<b>Stado ➻ </b> Correct Details! 💹
+<b>Time ➻ <b>{toc - tic:0.4f}</b>(s)
+<b>Checked by: </b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>Bot by: @EdwinGGx 🐧</b>
+\n
+<b>🟢-PowerChkBot-🟢</b>
 """)
     else:
         await message.reply("Error❌: REQ failed")
