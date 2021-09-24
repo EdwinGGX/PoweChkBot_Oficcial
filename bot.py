@@ -47,7 +47,7 @@ async def helpstr(message: types.Message):
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(
-        "All comands:\n/start\n/cmds\n/chk <b>= check your CC's</b>\n/tv <b>=check your hits</b>\n<b>Bot by: @EdwinGGx 🐧</b>\n\n<b>🟢-PowerChkBot-🟢</b>"
+        "All comands:\n/start\n/cmds\n/chk <b>= check your CC's</b>\n/tv <b>= check your hits</b>\n<b>Bot by: @EdwinGGx 🐧</b>\n\n<b>🟢-PowerChkBot-🟢</b>"
     )
     
 
