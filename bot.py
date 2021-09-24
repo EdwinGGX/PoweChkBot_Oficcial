@@ -40,14 +40,14 @@ rnd = ''.join(random.choices(string.ascii_lowercase +
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(
-        "Hello, type /cmds for see all comands\nBot by: @EdwinGGx"
+        "Hello, type /cmds for see all comands\nBot by: @EdwinGGx 🐧"
     )
 
 @dp.message_handler(commands=['cmds'], commands_prefix=PREFIX)
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(
-        "All comands:\n/start\n/cmds\n/chk <b>= check your CC's</b>n/tv <b>= check your hits</b>
+        "All comands:\n/start\n/cmds\n/chk <b>= check your CC's</b>\n/tv <b>=check your hits</b>\n<b>Bot by: @EdwinGGx 🐧</b>\n\n<b>🟢-PowerChkBot-🟢</b>"
     )
     
 
@@ -90,7 +90,6 @@ async def tv(message: types.Message):
 <b>Bot by: @EdwinGGx 🐧</b>
 \n
 <b>🟢-PowerChkBot-🟢</b>
-
 """)
     elif "PASS" in r.text:
         res = r.json()
@@ -104,7 +103,7 @@ async def tv(message: types.Message):
 <b>🟢-PowerChkBot-🟢</b>
 """)
     else:
-        await message.reply("Error❌: REQ failed")
+        await message.reply("Error ㊙️: REQ failed")
         
     
 @dp.message_handler(commands=['chk'], commands_prefix=PREFIX)
