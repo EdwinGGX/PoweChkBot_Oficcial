@@ -22,13 +22,13 @@ dp = Dispatcher(bot)
 ###USE YOUR ROTATING PROXY### NEED HQ PROXIES ELSE WONT WORK UPDATE THIS FILED
 
 proxy = {
-    "http": "http://deplaobr-rotate:ocjxpp5iucgk@p.webshare.io:80/",
-    "https": "http://deplaobr-rotate:ocjxpp5iucgk@p.webshare.io:80/",
+    "http://ztubbvvr-rotate:ucflcuhl45pi@p.webshare.io:80/",
+    "http://ztubbvvr-rotate:ucflcuhl45pi@p.webshare.io:80/",
 } 
 
 session = requests.session()
 
-# session.proxies = proxy #UNCOMMENT IT AFTER PROXIES
+session.proxies = proxy #UNCOMMENT IT AFTER PROXIES
 
 #random str GEN FOR EMAIL
 N = 10
@@ -47,7 +47,15 @@ async def helpstr(message: types.Message):
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(
-        "All comands:\n/start\n/cmds\n/chk <b>= check your CC's</b>\n/tv <b>= check your hits</b>\n<b>Bot by: @EdwinGGx 🐧</b>\n\n<b>🟢-PowerChkBot-🟢</b>"
+        "All comands:\n/start\n/cmds\n/chk <b>= check your CC's</b>\n/tv <b>=check your hits</b>\n<b>Bot by: @EdwinGGx 🐧</b>\n\n<b>🟢-PowerChkBot-🟢</b>"
+    )
+
+@dp.message_handler(commands=['bin'], commands_prefix=PREFIX)
+async def helpstr(message: types.Message):
+    await message.answer_chat_action("typing")
+  
+    await message.reply(
+        "All comands:\n/start\n/cmds\n/chk <b>= check your CC's</b>\n/tv <b>=check your hits</b>\n<b>Bot by: @EdwinGGx 🐧</b>\n\n<b>🟢-PowerChkBot-🟢</b>"
     )
     
 
